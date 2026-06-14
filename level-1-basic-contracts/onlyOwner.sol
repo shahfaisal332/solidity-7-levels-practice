@@ -4,18 +4,18 @@ pragma solidity ^0.8.7;
 
 contract onlyowner{
     address public owner;
-    string public secretMassage;
+    string public secretMessage;
 
     constructor(){
         owner = msg.sender;   //msg.sender means deployer's address
     }
    //Only Owner can call this
-    function setmassage(string memory _massage) public{
-        require(msg.sender == owner, "only owner can massage");
-        secretMassage = _massage;
+    function setSecretMessage(string memory _message) public{
+        require(msg.sender == owner, "only owner can update message");
+        secretMessage = _message;
     }
  // Everyone can call this
-    function getmassage()public view returns(string memory){
+    function getSecretMassage()public view returns(string memory){
         return secretMassage;
     }
 }
