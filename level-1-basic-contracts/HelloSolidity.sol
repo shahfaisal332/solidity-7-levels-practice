@@ -3,14 +3,14 @@
 pragma solidity ^0.8.7;
 
 contract helloSoliditiy{
-    string public massage;
+    string public message;
 
-    function setMassage(string memory _massage) public{
-        massage = _massage;
+    function setMessage(string memory _message) public{
+        message = _message;
     }
 
-    function getMassage()public view returns (string memory){
-        return massage;
+    function getMessage()public view returns (string memory){
+        return message;
     }
 
 }
