@@ -8,7 +8,7 @@ contract studentRecord{
     uint public stdMarks;
 
     function setStudent(string memory _stdName, uint _stdRollNumber, uint _stdMarks) public{
-        require(_stdMarks <=  100, "invalid marks" );
+        require(_stdMarks <=  100, "Marks cannot be more than 100" );
         stdName = _stdName;
         stdRollNumber = _stdRollNumber;
         stdMarks = _stdMarks;
