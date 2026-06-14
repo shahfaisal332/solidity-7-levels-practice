@@ -10,12 +10,12 @@ contract SimpleWallet{
         owner =payable (msg.sender);
     }
 
-    modifier Onlyowner(){
+    modifier onlyOwner(){
         require(msg.sender == owner, "Only owner can withdraw");
         _;
     }
 
-    function deposite()payable public{
+    function deposit()payable public{
         //Anyone can deposite
     }
 
@@ -23,7 +23,7 @@ contract SimpleWallet{
         return address(this).balance;
     }
 
-    function withdraw(uint _amount) public Onlyowner{
+    function withdraw(uint _amount) public onlyOwner{
         require(_amount <= address(this).balance, "Insufficient Balance");
 
         payable(owner).transfer(_amount);
