@@ -2,7 +2,7 @@
 
 pragma solidity ^0.8.7;
 
-contract studentRecord{
+contract StudentRecord{
     string public stdName;
     uint public stdRollNumber;
     uint public stdMarks;
