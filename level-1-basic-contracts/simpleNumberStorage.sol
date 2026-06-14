@@ -2,7 +2,7 @@
 
 pragma solidity ^0.8.0;
 
-contract numberStorage{
+contract NumberStorage{
     uint public number;
 
     function setNumber(uint _number) public{
@@ -18,6 +18,7 @@ contract numberStorage{
     }
 
     function decreaseNumber() public{
+        require(number > 0, "Number cannot go below zero");
         number -= 1;
     }
 }
